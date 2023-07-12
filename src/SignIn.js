@@ -1,24 +1,3 @@
-// import React from 'react';
-// import './App.css';
-
-// function SignIn(){
-//     return(
-//     <div id="grad1" className="App">
-//       <div className="navbar">
-//         <a href="/">Home</a>
-//         <a href="about">About us</a>
-//         <a href="stories">Success Stories</a>
-//         <a href="plans">Plans</a>
-//         <a href="contact">Contact us</a>
-//         <a href="signin">Sign in</a>
-//       </div>
-//       <h2>Sign In</h2>
-//     </div>
-//     )
-// }
-
-// export default SignIn
-
 import React, { useState } from 'react';
 import './App.css';
 
@@ -58,9 +37,9 @@ function SignIn() {
         <a href="stories">Success Stories</a>
         <a href="plans">Plans</a>
         <a href="contact">Contact us</a>
-        <a href="signin">Sign in</a>
+        <a href="signin">Account</a>
       </div>
-      <h2>Sign In</h2>
+      <h2>Account</h2>
       <div className="form-container">
         <h3>Login</h3>
         <form onSubmit={handleLoginSubmit}>

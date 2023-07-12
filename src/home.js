@@ -11,11 +11,11 @@ function Home(){
         <a href="stories">Success Stories</a>
         <a href="plans">Plans</a>
         <a href="contact">Contact us</a>
-        <a href="signin">Sign in</a>
+        <a href="signin">Account</a>
       </div>
 
       <h2>Welcome to MyGapMentor.com</h2>
-      <h3>Your Gateway to Maximizing Your Gap Year Potential!</h3>
+      <h3 id='gateaway'>Your Gateway to Maximizing Your Gap Year Potential!</h3>
       <div className='basicdiv'>
       <a href="/basics">      
       <button className="big-button">Ready to Start Planning Your Resume with us? Click Here!</button>

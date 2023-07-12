@@ -1,86 +1,86 @@
-// import React from 'react';
-// import './App.css';
-
-// function Basics(){
-//     return(
-//     <div id="grad1" className="App">
-//       <div className="navbar">
-//         <a href="/">Home</a>
-//         <a href="about">About us</a>
-//         <a href="stories">Success Stories</a>
-//         <a href="plans">Plans</a>
-//         <a href="contact">Contact us</a>
-//         <a href="signin">Sign in</a>
-//       </div>
-    
-//     <h2>Let's start with basics.</h2>
-
-//         <html>
-//         <head>
-//         <title>Category Boxes</title>
-//         </head>
-//         <body>
-//         <div class="box">
-//             <label for="major">Major?</label>
-//             <select id="major">
-//             <option value="Computer Science">Computer Science</option>
-//             <option value="Engineering">Engineering</option>
-//             <option value="Biology">Biology</option>
-//             </select>
-//             <button onclick="addCategory('major')">Select</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="volunteering">Volunteering?</label>
-//             <button onclick="addCategory('volunteering')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="internships">Internships?</label>
-//             <button onclick="addCategory('internships')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="jobs">Jobs?</label>
-//             <button onclick="addCategory('jobs')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="research">Research projects?</label>
-//             <button onclick="addCategory('research')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="pet">Pet projects?</label>
-//             <button onclick="addCategory('pet')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="robotics">Robotics?</label>
-//             <button onclick="addCategory('robotics')">Add</button>
-//         </div>
-
-//         <div class="box">
-//             <label for="hackathons">Hackathons?</label>
-//             <button onclick="addCategory('hackathons')">Add</button>
-//         </div>
-
-//         <script src="script.js"></script>
-//         </body>
-//         </html>
-
-
-//     </div>
-//     )
-// }
-
-// export default Basics
-
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Basics() {
-  const [categoryData, setCategoryData] = useState({ volunteering: { showForm: true, events: [{}] }, internships: {showForm: true, events: [{}]} });
+  const navigate = useNavigate();
+  const [selectedMajor, setSelectedMajor] = useState('');
+
+  const [categoryData, setCategoryData] = useState({ 
+    volunteering: { showForm: true, events: [{}] }, 
+    internships: {showForm: true, events: [{}]},
+    pet_projects: { showForm: true, events: [{}] }, 
+    research_projects: {showForm: true, events: [{}]},
+    jobs: { showForm: true, events: [{}] }, 
+    hackathons: {showForm: true, events: [{}]},
+    additional_information: {showForm: true, events: [{}]}
+   });
+
+   const handleClick = () => {
+      switch (selectedMajor) {
+          case 'Biology':
+              navigate('/Biology');
+              break;
+          case 'Business Administration':
+              navigate('/Business-Administration');
+              break;
+          case 'Chemistry':
+              navigate('/Chemistry');
+              break;
+          case 'Communications':
+              navigate('/Communications');
+              break;
+          case 'Computer Science':
+              navigate('/Computer-Science');
+              break;
+          case 'Economics':
+              navigate('/Economics');
+              break;
+          case 'Education':
+              navigate('/Education');
+              break;
+          case 'Engineering':
+              navigate('/Engineering');
+              break;
+          case 'English':
+              navigate('/English');
+              break;
+          case 'Environmental Science':
+              navigate('/Environmental-Science');
+              break;
+          case 'Fine Arts':
+              navigate('/FineArts');
+              break;
+          case 'History':
+              navigate('/History');
+              break;
+          case 'Journalism':
+              navigate('/Journalism');
+              break;
+          case 'Mathematics':
+              navigate('/Mathematics');
+              break;
+          case 'Music':
+              navigate('/Music');
+              break;
+          case 'Nursing':
+              navigate('/Nursing');
+              break;
+          case 'Physics':
+              navigate('/Physics');
+              break;
+          case 'Political Science':
+              navigate('/Political-Science');
+              break;
+          case 'Psychology':
+              navigate('/Psychology');
+              break;
+          case 'Sociology':
+              navigate('/Sociology');
+              break;
+          default:
+              break;
+      }
+  }
 
   function addCategory(category) {
     setCategoryData((prevData) => ({
@@ -138,15 +138,18 @@ function Basics() {
         <a href="stories">Success Stories</a>
         <a href="plans">Plans</a>
         <a href="contact">Contact us</a>
-        <a href="signin">Sign in</a>
+        <a href="signin">Account</a>
       </div>
 
-      <h2>Let's start with basics.</h2>
+      <h2 id='basics-title'>Let's start with basics</h2>
 
         <div className="category-container">
         <div className="category-box">
             <h3>Major</h3>
-            <select id="major">
+            <select 
+              value={selectedMajor}
+              onChange={(e) => setSelectedMajor(e.target.value)}
+            >
             <option value="">Select a major</option>
             <option value="Biology">Biology</option>
             <option value="Business Administration">Business Administration</option>
@@ -168,7 +171,6 @@ function Basics() {
             <option value="Political Science">Political Science</option>
             <option value="Psychology">Psychology</option>
             <option value="Sociology">Sociology</option>
-            {/* Add more options here */}
             </select>
         </div>
         </div>
@@ -239,7 +241,177 @@ function Basics() {
         </div>
         </div>
 
-        <button id="generate-activities">Generate Activities</button>
+        <div className="category-container">
+        <div className="category-box" style={{ width: '550px' }}>
+            <h3>Pet projects</h3>
+            {categoryData.pet_projects?.showForm ? (
+            <div>
+                {categoryData.pet_projects.events.map((event, index) => (
+                <div key={index}>
+                    <label id='pet_projects-label'>What did you do?</label>
+                    <input
+                    type="text"
+                    value={event.description || ''}
+                    onChange={(e) =>
+                        handleInputChange('pet_projects', index, 'description', e.target.value)
+                    }
+                    />
+                    {index > 0 && (
+                    <button onClick={() => handleRemoveEvent('pet_projects', index)}>
+                        Remove
+                    </button>
+                    )}
+                </div>
+                ))}
+                <button onClick={() => handleAddEvent('pet_projects')}>Add</button>
+                <br />
+            </div>
+            ) : (
+            <button onClick={() => addCategory('pet_projects')}>
+                {categoryData.pet_projects?.events.length > 0 ? 'Add More' : 'Add'}
+            </button>
+            )}
+        </div>
+        </div>
+
+        <div className="category-container">
+        <div className="category-box" style={{ width: '550px' }}>
+            <h3>Research projects</h3>
+            {categoryData.research_projects?.showForm ? (
+            <div>
+                {categoryData.research_projects.events.map((event, index) => (
+                <div key={index}>
+                    <label id='research_projects-label'>What did you do?</label>
+                    <input
+                    type="text"
+                    value={event.description || ''}
+                    onChange={(e) =>
+                        handleInputChange('research_projects', index, 'description', e.target.value)
+                    }
+                    />
+                    {index > 0 && (
+                    <button onClick={() => handleRemoveEvent('research_projects', index)}>
+                        Remove
+                    </button>
+                    )}
+                </div>
+                ))}
+                <button onClick={() => handleAddEvent('research_projects')}>Add</button>
+                <br />
+            </div>
+            ) : (
+            <button onClick={() => addCategory('research_projects')}>
+                {categoryData.research_projects?.events.length > 0 ? 'Add More' : 'Add'}
+            </button>
+            )}
+        </div>
+        </div>
+
+        <div className="category-container">
+        <div className="category-box" style={{ width: '550px' }}>
+            <h3>Jobs</h3>
+            {categoryData.internships?.showForm ? (
+            <div>
+                {categoryData.internships.events.map((event, index) => (
+                <div key={index}>
+                    <label id='internships-label'>What did you do?</label>
+                    <input
+                    type="text"
+                    value={event.description || ''}
+                    onChange={(e) =>
+                        handleInputChange('internships', index, 'description', e.target.value)
+                    }
+                    />
+                    {index > 0 && (
+                    <button onClick={() => handleRemoveEvent('internships', index)}>
+                        Remove
+                    </button>
+                    )}
+                </div>
+                ))}
+                <button onClick={() => handleAddEvent('internships')}>Add</button>
+                <br />
+            </div>
+            ) : (
+            <button onClick={() => addCategory('internships')}>
+                {categoryData.internships?.events.length > 0 ? 'Add More' : 'Add'}
+            </button>
+            )}
+        </div>
+        </div>
+
+        <div className="category-container">
+        <div className="category-box" style={{ width: '550px' }}>
+            <h3>Hackathons</h3>
+            {categoryData.hackathons?.showForm ? (
+            <div>
+                {categoryData.hackathons.events.map((event, index) => (
+                <div key={index}>
+                    <label id='hackathons-label'>What did you do?</label>
+                    <input
+                    type="text"
+                    value={event.description || ''}
+                    onChange={(e) =>
+                        handleInputChange('hackathons', index, 'description', e.target.value)
+                    }
+                    />
+                    {index > 0 && (
+                    <button onClick={() => handleRemoveEvent('hackathons', index)}>
+                        Remove
+                    </button>
+                    )}
+                </div>
+                ))}
+                <button onClick={() => handleAddEvent('hackathons')}>Add</button>
+                <br />
+            </div>
+            ) : (
+            <button onClick={() => addCategory('hackathons')}>
+                {categoryData.hackathons?.events.length > 0 ? 'Add More' : 'Add'}
+            </button>
+            )}
+        </div>
+        </div>
+
+        <div className="category-container">
+        <div className="category-box" style={{ width: '550px' }}>
+            <h3>Additional information</h3>
+            {categoryData.additional_information?.showForm ? (
+            <div>
+                {categoryData.additional_information.events.map((event, index) => (
+                <div key={index}>
+                    <label id='additional_information-label'>What did you do?</label>
+                    <input
+                    type="text"
+                    value={event.description || ''}
+                    onChange={(e) =>
+                        handleInputChange('additional_information', index, 'description', e.target.value)
+                    }
+                    />
+                    {index > 0 && (
+                    <button onClick={() => handleRemoveEvent('additional_information', index)}>
+                        Remove
+                    </button>
+                    )}
+                </div>
+                ))}
+                <button onClick={() => handleAddEvent('additional_information')}>Add</button>
+                <br />
+            </div>
+            ) : (
+            <button onClick={() => addCategory('additional_information')}>
+                {categoryData.additional_information?.events.length > 0 ? 'Add More' : 'Add'}
+            </button>
+            )}
+        </div>
+        </div>
+
+      <button 
+        onClick={handleClick}
+        id="generate-activities"
+      >
+        Generate Activities
+      </button>
 
     </div>
   );

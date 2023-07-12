@@ -8,23 +8,61 @@ import Plans from './Plans';
 import Contact from './Contact';
 import SignIn from './SignIn';
 import Basics from './Basics';
-import ComputerScience from './ComputerScience';
+import ComputerScience from './Computer-Science';
+import Biology from './Biology';
+import BusinessAdministration from './Business-Administration';
+import Chemistry from './Chemistry';
+import Communications from './Communications';
+import Economics from './Economics';
+import Education from './Education';
+import Engineering from './Engineering';
+import English from './English';
+import EnvironmentalScience from './Environmental-Science';
+import FineArts from './Fine-Arts';
+import History from './History';
+import Journalism from './Journalism';
+import Mathematics from './Mathematics';
+import Music from './Music';
+import Nursing from './Nursing';
+import Physics from './Physics';
+import PoliticalScience from './Political-Science';
+import Psychology from './Psychology';
+import Sociology from './Sociology';
 import { useState } from 'react';
 
 function App() {
   const [categoryData, setCategoryData] = useState({});
-  
+
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />}></Route>
+      <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="stories" element={<Stories />} />
       <Route path="plans" element={<Plans />} />
       <Route path="contact" element={<Contact />} />
       <Route path="signin" element={<SignIn />} />
       <Route path="basics" element={<Basics categoryData={categoryData} setCategoryData={setCategoryData}/>} />
-      <Route path="computer-science-internships" element={<ComputerScience categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="computer-science" element={<ComputerScience categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="biology" element={<Biology categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="business-administration" element={<BusinessAdministration categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="chemistry" element={<Chemistry categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="communications" element={<Communications categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="economics" element={<Economics categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="education" element={<Education categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="engineering" element={<Engineering categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="english" element={<English categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="environmental-science" element={<EnvironmentalScience categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="fine-arts" element={<FineArts categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="history" element={<History categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="journalism" element={<Journalism categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="mathematics" element={<Mathematics categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="music" element={<Music categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="nursing" element={<Nursing categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="physics" element={<Physics categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="political-science" element={<PoliticalScience categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="psychology" element={<Psychology categoryData={categoryData} setCategoryData={setCategoryData}/>} />
+      <Route path="sociology" element={<Sociology categoryData={categoryData} setCategoryData={setCategoryData}/>} />
     </Routes>
   </BrowserRouter>
   );

@@ -32,7 +32,6 @@ import { useState } from 'react';
 
 function App() {
   const [categoryData, setCategoryData] = useState({});
-
   return (
     <BrowserRouter>
     <Routes>

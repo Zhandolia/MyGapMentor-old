@@ -142,7 +142,6 @@ function Basics() {
       </div>
 
       <h2 id='basics-title'>Let's start with basics</h2>
-
         <div className="category-container">
         <div className="category-box">
             <h3>Major</h3>

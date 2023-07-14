@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function SignIn() {
+function Account() {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
   const [registrationData, setRegistrationData] = useState({
     name: '',
@@ -50,6 +50,7 @@ function SignIn() {
               name="email"
               value={loginData.email}
               onChange={handleLoginChange}
+              placeholder="Email" required
             />
           </div>
           <div>
@@ -59,6 +60,7 @@ function SignIn() {
               name="password"
               value={loginData.password}
               onChange={handleLoginChange}
+              placeholder="Password" required
             />
           </div>
           <button type="submit">Login</button>
@@ -74,6 +76,7 @@ function SignIn() {
               name="name"
               value={registrationData.name}
               onChange={handleRegistrationChange}
+              placeholder="Name" required
             />
           </div>
           <div>
@@ -83,6 +86,7 @@ function SignIn() {
               name="email"
               value={registrationData.email}
               onChange={handleRegistrationChange}
+              placeholder="Email" required
             />
           </div>
           <div>
@@ -92,6 +96,7 @@ function SignIn() {
               name="password"
               value={registrationData.password}
               onChange={handleRegistrationChange}
+              placeholder="Password" required
             />
           </div>
           <button type="submit">Register</button>
@@ -101,4 +106,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default Account;

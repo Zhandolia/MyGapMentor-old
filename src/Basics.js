@@ -138,7 +138,7 @@ function Basics() {
         <a href="stories">Success Stories</a>
         <a href="plans">Plans</a>
         <a href="contact">Contact us</a>
-        <a href="signin">Account</a>
+        <a href="account">Account</a>
       </div>
 
       <h2 id='basics-title'>Let's start with basics</h2>

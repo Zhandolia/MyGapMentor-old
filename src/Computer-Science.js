@@ -11,7 +11,7 @@ function ComputerScience({categoryData, setCategoryData}){
         <a href="stories">Success Stories</a>
         <a href="plans">Plans</a>
         <a href="contact">Contact us</a>
-        <a href="signin">Sign in</a>
+        <a href="account">Sign in</a>
       </div>
 
       <h2>Computer Science</h2>

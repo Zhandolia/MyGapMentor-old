@@ -319,13 +319,13 @@ body {
   margin-bottom: 0; /* Removes the margin from the last item */
 }
 
-/* SignIn */
+/* Account */
 .form-container {
   width: 80%;
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: #5a6edb;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }

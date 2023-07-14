@@ -6,7 +6,7 @@ import About from './About';
 import Stories from './Stories';
 import Plans from './Plans';
 import Contact from './Contact';
-import SignIn from './SignIn';
+import Account from './Account';
 import Basics from './Basics';
 import ComputerScience from './Computer-Science';
 import Biology from './Biology';
@@ -41,7 +41,7 @@ function App() {
       <Route path="stories" element={<Stories />} />
       <Route path="plans" element={<Plans />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="signin" element={<SignIn />} />
+      <Route path="account" element={<Account />} />
       <Route path="basics" element={<Basics categoryData={categoryData} setCategoryData={setCategoryData}/>} />
       <Route path="computer-science" element={<ComputerScience categoryData={categoryData} setCategoryData={setCategoryData}/>} />
       <Route path="biology" element={<Biology categoryData={categoryData} setCategoryData={setCategoryData}/>} />

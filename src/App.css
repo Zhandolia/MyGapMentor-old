@@ -312,11 +312,11 @@ body {
 }
 
 .about-list li {
-  margin-bottom: 20px; /* Adds some space between the list items */
+  margin-bottom: 20px;
 }
 
 .about-list li:last-child {
-  margin-bottom: 0; /* Removes the margin from the last item */
+  margin-bottom: 0;
 }
 
 /* Account */

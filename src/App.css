@@ -308,7 +308,7 @@ body {
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow to make the container appear slightly raised */
   color: #fff;
-  line-height: 1.6; /* Increases the line-height to improve readability */
+  line-height: 1.6;
 }
 
 .about-list li {

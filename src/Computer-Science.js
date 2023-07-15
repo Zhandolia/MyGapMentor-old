@@ -279,33 +279,6 @@ function ComputerScience({categoryData, setCategoryData}){
           </p>
         </div>
 
-        <div className="cs-internship">
-        <a className='intern-title' target="_blank" href="https://cty.jhu.edu/programs/online/topics/computer-science-and-technology-online">23. JOHNS HOPKINS CENTER FOR TALENTED YOUTH (CTY)</a>
-          <p><strong>Location:</strong> </p>
-          <p><strong>Duration:</strong> </p>
-          <p>
-          
-          </p>
-        </div>
-
-        <div className="cs-internship">
-          <a className='intern-title' target="_blank" href="">24. </a>
-          <p><strong>Application Deadline:</strong> </p>
-          <p><strong>Duration:</strong> </p>
-          <p>
-          
-          </p>
-        </div>
-
-        <div className="cs-internship">
-        <a className='intern-title' target="_blank" href="">25. </a>
-          <p><strong>Application Deadline:</strong> </p>
-          <p><strong>Duration:</strong> </p>
-          <p>
-          
-          </p>
-        </div>
-
       </div>
 
     <h2 id='csp'>Pet Projects</h2>

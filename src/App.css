@@ -39,22 +39,34 @@
 
 .navbar {
   overflow: hidden;
-  background-color: #282829;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   top: 0;
-  position: sticky;
   z-index: 1000;
 }
 
 .navbar a {
   font-size: 16px;
-  color: #FFF; /* Updated font color */
+  color: #FFF;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 30px;
   text-decoration: none;
+  border: 1px solid #FFF;
+  margin: 15px 15px 15px 15px;
+  border-radius: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #FFF;
+  color: #000085;
+}
+
+.navbar a:visited {
+  color: #FFFFFF;
 }
 
 .dropdown {
@@ -71,11 +83,6 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #24B97A;
 }
 
 .dropdown .dropdown-content {
@@ -351,7 +358,6 @@ body {
   box-sizing: border-box;
 }
 
-
 .form-container button {
   width: 100%;
   padding: 10px;
@@ -382,7 +388,20 @@ body {
 
 .big-button:hover {
   background-color: #24B97A;
-  color: #FFF; /* Updated font color */
+  color: #FFF;
+}
+
+.big-button .big-button-link {
+  font-size: 24px;
+  padding: 30px 40px;
+  background-color: #FFF;
+  color: #282829;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #282829;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 h2 {
@@ -690,9 +709,6 @@ h3 {
   color: blue;
 }
 
-.navbar a:visited {
-  color: #FFFFFF;
-}
 
 .cs-internships {
   display: flex;

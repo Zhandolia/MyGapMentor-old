@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from './favicon.ico';
 
 function Basics() {
   const navigate = useNavigate();
@@ -133,12 +134,24 @@ function Basics() {
   return (
     <div id="grad1" className="App">
       <div className="navbar">
-        <a href="/">Home</a>
-        <a href="about">About us</a>
-        <a href="stories">Success Stories</a>
-        <a href="plans">Plans</a>
-        <a href="contact">Contact us</a>
-        <a href="account">Account</a>
+        <div className="navbar-left">
+            <div className="home-logo-group">
+              <a href="/">
+                <img src={logo} alt="Logo" className="navbar-logo" />
+              </a>
+              <a href="/">MyGapMentor</a>
+            </div>
+          </div>
+          <div className="navbar-center">
+            <a href="about">About us</a>
+            <a href="stories">Success Stories</a>
+            <a href="plans">Plans</a>
+            <a href="contact">Contact us</a>
+          </div>
+
+          <div className="navbar-right">
+            <a href="account">Account</a>
+          </div>
       </div>
 
       <h2 id='basics-title'>Let's start with basics</h2>

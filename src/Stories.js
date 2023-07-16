@@ -1,16 +1,29 @@
 import React from 'react';
 import './App.css';
+import logo from './favicon.ico';
 
 function Stories() {
   return (
       <div id="grad1" className="App">
           <div className="navbar">
-              <a href="/">Home</a>
+            <div className="navbar-left">
+            <div className="home-logo-group">
+              <a href="/">
+                <img src={logo} alt="Logo" className="navbar-logo" />
+              </a>
+              <a href="/">MyGapMentor</a>
+            </div>
+            </div>
+            <div className="navbar-center">
               <a href="about">About us</a>
               <a href="stories">Success Stories</a>
               <a href="plans">Plans</a>
               <a href="contact">Contact us</a>
-              <a href="account">Account</a>
+            </div>
+            
+            <div className="navbar-right">
+            <a href="account">Account</a>
+        </div>
           </div>
           <h2>Success Stories</h2>
           <div className="stories-container">

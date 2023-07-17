@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import logo from './favicon.ico';
 
 function Account() {
   const [loginData, setLoginData] = useState({ email: '', password: '' });
@@ -32,12 +33,24 @@ function Account() {
   return (
     <div id="grad1" className="App">
       <div className="navbar">
-        <a href="/">Home</a>
-        <a href="about">About us</a>
-        <a href="stories">Success Stories</a>
-        <a href="plans">Plans</a>
-        <a href="contact">Contact us</a>
-        <a href="signin">Account</a>
+        <div className="navbar-left">
+        <div className="home-logo-group">
+          <a href="/">
+            <img src={logo} alt="Logo" className="navbar-logo" />
+          </a>
+          <a href="/">MyGapMentor</a>
+        </div>
+        </div>
+        <div className="navbar-center">
+          <a href="about">About us</a>
+          <a href="stories">Success Stories</a>
+          <a href="plans">Plans</a>
+          <a href="contact">Contact us</a>
+        </div>
+
+        <div className="navbar-right">
+          <a href="account">Account</a>
+        </div>
       </div>
       <h2>Account</h2>
       <div className="form-container">

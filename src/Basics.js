@@ -154,10 +154,10 @@ function Basics() {
           </div>
       </div>
 
-      <h2 id='basics-title'>Let's start with basics</h2>
+      <h2>Let's start with basics</h2>
         <div className="category-container">
         <div className="category-box">
-            <h3>Major</h3>
+            <h3 id='basics-title'>Major</h3>
             <select 
               value={selectedMajor}
               onChange={(e) => setSelectedMajor(e.target.value)}
@@ -189,7 +189,7 @@ function Basics() {
 
       <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Volunteering</h3>
+            <h3 id='basics-title'>Volunteering</h3>
             {categoryData.volunteering?.showForm ? (
             <div>
                 {categoryData.volunteering.events.map((event, index) => (
@@ -197,6 +197,7 @@ function Basics() {
                     <label id='volunteering-label'>How did you contribute?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('volunteering', index, 'description', e.target.value)
@@ -222,7 +223,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Internships</h3>
+            <h3 id='basics-title'>Internships</h3>
             {categoryData.internships?.showForm ? (
             <div>
                 {categoryData.internships.events.map((event, index) => (
@@ -230,6 +231,7 @@ function Basics() {
                     <label id='internships-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('internships', index, 'description', e.target.value)
@@ -255,7 +257,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Pet projects</h3>
+            <h3 id='basics-title'>Pet projects</h3>
             {categoryData.pet_projects?.showForm ? (
             <div>
                 {categoryData.pet_projects.events.map((event, index) => (
@@ -263,6 +265,7 @@ function Basics() {
                     <label id='pet_projects-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('pet_projects', index, 'description', e.target.value)
@@ -288,7 +291,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Research projects</h3>
+            <h3 id='basics-title'>Research projects</h3>
             {categoryData.research_projects?.showForm ? (
             <div>
                 {categoryData.research_projects.events.map((event, index) => (
@@ -296,6 +299,7 @@ function Basics() {
                     <label id='research_projects-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('research_projects', index, 'description', e.target.value)
@@ -321,7 +325,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Jobs</h3>
+            <h3 id='basics-title'>Jobs</h3>
             {categoryData.internships?.showForm ? (
             <div>
                 {categoryData.internships.events.map((event, index) => (
@@ -329,6 +333,7 @@ function Basics() {
                     <label id='internships-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('internships', index, 'description', e.target.value)
@@ -354,7 +359,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Hackathons</h3>
+            <h3 id='basics-title'>Hackathons</h3>
             {categoryData.hackathons?.showForm ? (
             <div>
                 {categoryData.hackathons.events.map((event, index) => (
@@ -362,6 +367,7 @@ function Basics() {
                     <label id='hackathons-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('hackathons', index, 'description', e.target.value)
@@ -387,7 +393,7 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3>Additional information</h3>
+            <h3 id='basics-title'>Additional information</h3>
             {categoryData.additional_information?.showForm ? (
             <div>
                 {categoryData.additional_information.events.map((event, index) => (
@@ -395,6 +401,7 @@ function Basics() {
                     <label id='additional_information-label'>What did you do?</label>
                     <input
                     type="text"
+                    placeholder="Describe in 2-3 sentences"
                     value={event.description || ''}
                     onChange={(e) =>
                         handleInputChange('additional_information', index, 'description', e.target.value)

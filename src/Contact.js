@@ -25,7 +25,7 @@ function Contact() {
             <a href="account">Account</a>
         </div>
           </div>
-          <h2>Contact</h2>
+          <h2>Contact us</h2>
           <div className="contact-container">
               <h4>Feel free to email us at:</h4>
               <p>mygapmentor@gmail.com</p>

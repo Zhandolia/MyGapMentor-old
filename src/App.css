@@ -306,7 +306,7 @@ body {
   margin: 40px auto;
   padding: 30px;
   background-color: #6495ED;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   color: #F5F5DC;
   line-height: 1.6;
@@ -330,7 +330,7 @@ body {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #5a6edb;
+  background-color: #6495ED;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 }
@@ -506,31 +506,6 @@ h3 {
   font-size: 15px;
 }
 
-#internships-label {
-  font-weight: 500;
-  font-size: 15px;
-}
-
-#pet_projects-label {
-  font-weight: 500;
-  font-size: 15px;
-}
-
-#research_projects-label {
-  font-weight: 500;
-  font-size: 15px;
-}
-
-#hackathons-label {
-  font-weight: 500;
-  font-size: 15px;
-}
-
-#additional_information-label {
-  font-weight: 500;
-  font-size: 15px;
-}
-
 /* ******** */
 .category-container {
   margin-bottom: 20px;
@@ -541,9 +516,8 @@ h3 {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  border: 2px solid #F5F5DC;
   border-radius: 5px;
-  background-color: #5a6edb;
+  background-color: #6495ED;
   display: flex;
   flex-direction: column;
   justify-content: center;

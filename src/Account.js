@@ -52,7 +52,7 @@ function Account() {
           <a href="account">Account</a>
         </div>
       </div>
-      <h2>Account</h2>
+      <h2 id='account-title'>Account</h2>
       <div className="form-container">
         <h3>Login</h3>
         <form onSubmit={handleLoginSubmit}>

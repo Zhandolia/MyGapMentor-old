@@ -154,7 +154,7 @@ function Basics() {
           </div>
       </div>
 
-      <h2>Let's start with basics</h2>
+      <h2 id='lets-basics'>Let's start with basics</h2>
         <div className="category-container">
         <div className="category-box">
             <h3 id='basics-title'>Major</h3>
@@ -194,7 +194,7 @@ function Basics() {
             <div>
                 {categoryData.volunteering.events.map((event, index) => (
                 <div key={index}>
-                    <label id='volunteering-label'>How did you contribute?</label>
+                    <label id='basics-labels'>How did you contribute?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -228,7 +228,7 @@ function Basics() {
             <div>
                 {categoryData.internships.events.map((event, index) => (
                 <div key={index}>
-                    <label id='internships-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -257,12 +257,12 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3 id='basics-title'>Pet projects</h3>
+            <h3 id='basics-title'>Pet Projects</h3>
             {categoryData.pet_projects?.showForm ? (
             <div>
                 {categoryData.pet_projects.events.map((event, index) => (
                 <div key={index}>
-                    <label id='pet_projects-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -291,12 +291,12 @@ function Basics() {
 
         <div className="category-container">
         <div className="category-box" style={{ width: '550px' }}>
-            <h3 id='basics-title'>Research projects</h3>
+            <h3 id='basics-title'>Research Projects</h3>
             {categoryData.research_projects?.showForm ? (
             <div>
                 {categoryData.research_projects.events.map((event, index) => (
                 <div key={index}>
-                    <label id='research_projects-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -330,7 +330,7 @@ function Basics() {
             <div>
                 {categoryData.internships.events.map((event, index) => (
                 <div key={index}>
-                    <label id='internships-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -364,7 +364,7 @@ function Basics() {
             <div>
                 {categoryData.hackathons.events.map((event, index) => (
                 <div key={index}>
-                    <label id='hackathons-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"
@@ -398,7 +398,7 @@ function Basics() {
             <div>
                 {categoryData.additional_information.events.map((event, index) => (
                 <div key={index}>
-                    <label id='additional_information-label'>What did you do?</label>
+                    <label id='basics-labels'>What did you do?</label>
                     <input
                     type="text"
                     placeholder="Describe in 2-3 sentences"

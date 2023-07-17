@@ -321,6 +321,10 @@ body {
 }
 
 /* Account */
+#account-title {
+  margin-bottom: 40px;
+}
+
 .form-container {
   width: 80%;
   max-width: 400px;
@@ -367,12 +371,13 @@ body {
   background-color: #5cba53;
 }
 
-/* Start here button */ 
+/* Start here button */
+
 .big-button {
   font-size: 24px;
   padding: 30px 40px;
   background-color: #6495ED;
-  color: #282829;
+  color: #F5F5DC;
   border-radius: 10px;
   cursor: pointer;
   border: 2px solid #282829;
@@ -385,6 +390,7 @@ body {
   color: #F5F5DC;
 }
 
+/* 
 .big-button .big-button-link {
   font-size: 24px;
   padding: 30px 40px;
@@ -396,7 +402,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
-}
+} */
 
 h2 {
   margin-bottom: 10px;
@@ -435,13 +441,14 @@ h3 {
   flex-direction: column;
 }
 
-#basics-title {
+#lets-basics {
   margin-bottom: 40px;
 }
 
 #basics-title {
-  color: black;
+  color: #F5F5DC;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .nFac{
@@ -493,7 +500,8 @@ h3 {
   background-color: #45a049;
 }
 
-#volunteering-label {
+#basics-labels {
+  color: #F5F5DC;
   font-weight: 500;
   font-size: 15px;
 }
@@ -535,7 +543,7 @@ h3 {
   padding: 20px;
   border: 2px solid #F5F5DC;
   border-radius: 5px;
-  background-color: #F5F5DC;
+  background-color: #5a6edb;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -563,7 +571,7 @@ h3 {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #4caf50;
-  color: #F5F5DC; /* Updated font color */
+  color: #F5F5DC;
   border: none;
   border-radius: 5px;
   cursor: pointer;

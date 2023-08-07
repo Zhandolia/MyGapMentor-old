@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import logo from './favicon.ico';
+import Loading from './Loading';
 
 function Plans(){
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate loading
+        setTimeout(() => {
+        setLoading(false);
+        }, 1000); // 2 seconds delay, adjust as needed
+    }, []);
+
+    // Show loading spinner if loading
+    if (loading) {
+        return <Loading />;
+    }
+
     return(
     <div id="grad1" className="App">
       <div className="navbar">
